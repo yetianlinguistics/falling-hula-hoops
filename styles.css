@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+.falling-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hula-hoop {
+    position: absolute;
+    top: -200px; /* Start above the viewport */
+    width: 100px; /* Width of the vertical rectangle */
+    height: 200px; /* Height of the vertical rectangle */
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(110vh); /* End just below the viewport */
+    }
+}
+
+html {
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    overflow: hidden;
+}
+
+#stars, #stars:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 0 0 2px #FFF, 200px 200px 2px #FFF, 400px 400px 2px #FFF, 600px 600px 2px #FFF, 800px 800px 2px #FFF, 1000px 1000px 2px #FFF;
+    content: " ";
+    animation: animStar 50s linear infinite;
+}
+
+#stars2, #stars2:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 0 0 3px #FFF, 400px 400px 3px #FFF, 800px 800px 3px #FFF, 1200px 1200px 3px #FFF, 1600px 1600px 3px #FFF, 2000px 2000px 3px #FFF;
+    content: " ";
+    animation: animStar 100s linear infinite;
+}
+
+#stars3, #stars3:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: 0 0 5px #FFF, 600px 600px 5px #FFF, 1200px 1200px 5px #FFF, 1800px 1800px 5px #FFF, 2400px 2400px 5px #FFF, 3000px 3000px 5px #FFF;
+    content: " ";
+    animation: animStar 150s linear infinite;
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
