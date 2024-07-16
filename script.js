@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.falling-container');
     const createFallingHulaHoop = () => {
         const hulaHoop = document.createElement('img');
-        hulaHoop.src = 'https://i.imgur.com/your-image.png'; // Replace with your direct image link
+        hulaHoop.src = 'hulahoop.png'; // Replace with your direct image link
         hulaHoop.classList.add('hula-hoop');
         hulaHoop.style.left = `${Math.random() * 100}vw`; // Random horizontal position
         hulaHoop.style.animationDuration = `${5 + Math.random() * 5}s`; // Random fall duration between 5 and 10 seconds
